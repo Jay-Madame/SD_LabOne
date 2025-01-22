@@ -17,27 +17,27 @@
  fewest possible coins and bills <br>
 <br>
 
-## [ ] Currency [Denomination]
+## [x] Currency [Denomination]
 
-[ ] name: String (e.g. Ten note, Dime)<br>
-[ ] amt: double (0.05, 1.09) <br>
-[ ] form: String (bill, coin) <br>
-[ ] img: String (img file) <br>
+[x] name: String (e.g. Ten note, Dime)<br>
+[x] amt: double (0.05, 1.09) <br>
+[x] form: String (bill, coin) <br>
+[x] img: String (img file) <br>
 
 ## [ ] Purse (Class)
 
-[ ] cash: Map<Denomination, Integer>
+[x] cash: Map<Denomination, Integer>
      represents the money in the purse <br>
 
 ### Functions 
 
-[ ] add(type: Denomination, num: int): void<br>
-&nbsp; &nbsp; [ ] param **Denomination** & **int** num <br>
-&nbsp; &nbsp; [ ] return void <br>
+[x] add(type: Denomination, num: int): void<br>
+&nbsp; &nbsp; [x] param **Denomination** & **int** num <br>
+&nbsp; &nbsp; [x] return void <br>
 
-[ ] remove(type: Denomination, num: int): double <br>
-&nbsp; &nbsp; param: **Denomination** & **int** num <br>
-&nbsp; &nbsp; return: Amount current <br>
+[x] remove(type: Denomination, num: int): double <br>
+&nbsp; &nbsp; [x] param: **Denomination** & **int** num <br>
+&nbsp; &nbsp; [x] return: Amount current <br>
 
 [ ] getValue(): double <br>
 &nbsp; &nbsp; [ ] param  null <br>
