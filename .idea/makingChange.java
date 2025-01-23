@@ -38,3 +38,10 @@ public Purse makeChange(double amount)
     Purse purse = new Purse();
     return purse;
 }
+
+public Purse register(double amount)
+{
+    Purse purse = new Purse();
+    purse = makeChange(amount);
+    return purse;
+}

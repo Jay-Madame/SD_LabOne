@@ -48,13 +48,13 @@
 &nbsp; &nbsp; [x] return string representation of 
     amount total <br>
 
-## [ ] Register(Class)
+## [x] Register(Class)
 
 ### Functions
 
-[ ] makeChange(amt:double): Purse: <br>
-&nbsp; &nbsp; [ ] param **double** amount <br>
-&nbsp; &nbsp; [ ] return *Purse* <br>
+[x] makeChange(amt:double): Purse: <br>
+&nbsp; &nbsp; [x] param **double** amount <br>
+&nbsp; &nbsp; [x] return *Purse* <br>
 
 ---
 
