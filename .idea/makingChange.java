@@ -24,8 +24,17 @@ public class Purse {
     // returns total amount in purse
     double getValue(){
         return Denomination.totalAmount;
-
     }
 
+    String toString() {
+        int dollars = (int) getValue();
+        double cents = int ((getValue()*100)/10000);
+    }
 
+}
+
+public Purse makeChange(double amount)
+{
+    Purse purse = new Purse();
+    return purse;
 }

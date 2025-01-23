@@ -10,10 +10,10 @@
 
 # Making Change
 
-[ ] Create a function called makeChange <br>
-[ ] Param **double** amount <br>
-[ ] Return **Purse** object <br>
-&nbsp; &nbsp; [ ] _amount_ is translated into
+[x] Create a function called makeChange <br>
+[x] Param **double** amount <br>
+[x] Return **Purse** object <br>
+&nbsp; &nbsp; [x] _amount_ is translated into
  fewest possible coins and bills <br>
 <br>
 
@@ -39,13 +39,13 @@
 &nbsp; &nbsp; [x] param: **Denomination** & **int** num <br>
 &nbsp; &nbsp; [x] return: Amount current <br>
 
-[ ] getValue(): double <br>
-&nbsp; &nbsp; [ ] param  null <br>
-&nbsp; &nbsp; [ ] return total amount in purse <br>
+[x] getValue(): double <br>
+&nbsp; &nbsp; [x] param  null <br>
+&nbsp; &nbsp; [x] return total amount in purse <br>
 
-[ ] toString(): string <br>
-&nbsp; &nbsp; [ ] param null <br>
-&nbsp; &nbsp; [ ] return string representation of 
+[x] toString(): string <br>
+&nbsp; &nbsp; [x] param null <br>
+&nbsp; &nbsp; [x] return string representation of 
     amount total <br>
 
 ## [ ] Register(Class)
