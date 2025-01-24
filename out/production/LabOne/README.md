@@ -24,7 +24,7 @@
 [x] form: String (bill, coin) <br>
 [x] img: String (img file) <br>
 
-## [ ] Purse (Class)
+## [x] Purse (Class)
 
 [x] cash: Map<Denomination, Integer>
      represents the money in the purse <br>
@@ -62,8 +62,8 @@
 
 ## [ ] MakingChange(Class)
 
-[ ] Contains **main** <br>
-&nbsp; &nbsp; [ ] create a JFrame <br>
+[x] Contains **main** <br>
+&nbsp; &nbsp; [x] create a JFrame <br>
 &nbsp; &nbsp; [ ] add a RegisterPanel <br>
 
 [ ] register: Register <br>
