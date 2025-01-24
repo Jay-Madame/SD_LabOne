@@ -17,8 +17,8 @@ public class Register {
                 new Denomination("Five-Dollar Bill", 5.0, "bill","/Users/jay/Projects/SD_Spring2025/Module1/LabOne/labOneMakingChange/fiveDollarBill.png"),
                 new Denomination("One-Dollar Bill", 1.0,"bill", "/Users/jay/Projects/SD_Spring2025/Module1/LabOne/labOneMakingChange/oneDollarBill.png"),
                 new Denomination("Quarter", 0.25,"coin","/Users/jay/Projects/SD_Spring2025/Module1/LabOne/labOneMakingChange/quarter.png"),
-                new Denomination("Dime", 0.10,"coin,","/Users/jay/Projects/SD_Spring2025/Module1/LabOne/labOneMakingChange/dime.png"),
-                new Denomination("Nickel", 0.05, "coin,","/Users/jay/Projects/SD_Spring2025/Module1/LabOne/labOneMakingChange/nickle.png"),
+                new Denomination("Dime", 0.10,"coin","/Users/jay/Projects/SD_Spring2025/Module1/LabOne/labOneMakingChange/dime.png"),
+                new Denomination("Nickel", 0.05, "coin","/Users/jay/Projects/SD_Spring2025/Module1/LabOne/labOneMakingChange/nickle.png"),
                 new Denomination("Penny", 0.01,"coin", "/Users/jay/Projects/SD_Spring2025/Module1/LabOne/labOneMakingChange/penny.png")
         };
 

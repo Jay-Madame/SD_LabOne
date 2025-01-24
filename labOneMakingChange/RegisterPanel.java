@@ -29,7 +29,7 @@ public class RegisterPanel extends JPanel {
 
         // Image display panel
         imagePanel = new JPanel();
-        imagePanel.setLayout(new FlowLayout());
+        imagePanel.setLayout(new GridLayout(0, 5));
 
         add(inputPanel, BorderLayout.NORTH);
         add(new JScrollPane(changeDisplay), BorderLayout.CENTER);
@@ -62,6 +62,8 @@ public class RegisterPanel extends JPanel {
     private void displayImages(Purse purse) {
         imagePanel.removeAll();
 
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.fill = GridBagConstraints.HORIZONTAL;
 
         for (Map.Entry<Denomination, Integer> entry : purse.getCash().entrySet()) {
             Denomination denom = entry.getKey();
@@ -70,22 +72,32 @@ public class RegisterPanel extends JPanel {
             String imageFile = denom.img();
             ImageIcon icon = new ImageIcon(imageFile);
 
+            // resizing my fat cinabunny
             ImageIcon resizedImage = icon;
             if (denom.form().equals("bill")) {
                 Image image = icon.getImage();
                 Image scaledImage = image.getScaledInstance(300, 100, java.awt.Image.SCALE_SMOOTH);
                 resizedImage = new ImageIcon(scaledImage);
+                gbc.gridwidth = 2;
             }
 
             if (denom.form().equals("coin")) {
                 Image image = icon.getImage();
                 Image scaledImage = image.getScaledInstance(100, 100, java.awt.Image.SCALE_SMOOTH);
                 resizedImage = new ImageIcon(scaledImage);
+                gbc.gridwidth = 1;
             }
 
             for (int i = 0; i < count; i++) {
                 JLabel label = new JLabel(resizedImage);
-                imagePanel.add(label);
+                imagePanel.add(label, gbc);
+
+                gbc.gridx++;
+
+                if (gbc.gridx >= 5) {
+                    gbc.gridx = 0;
+                    gbc.gridy++;
+                }
             }
         }
 
