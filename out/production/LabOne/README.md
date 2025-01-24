@@ -96,13 +96,13 @@
 This function will handle logic for processing
  input changes. <br>
 
-## [ ] PursePanel (Class, Extends JPanel)
+## [x] PursePanel (Class, Extends JPanel)
 
-[ ] purse: Purse (represent purse)<br>
+[x] purse: Purse (represent purse)<br>
 
 ### Functions
-[ ] paintComponent(Graphics g): void <br>
-&nbsp; &nbsp; [ ] param **Graphics** g <br>
-&nbsp; &nbsp; [ ] return void <br>
+[x] paintComponent(Graphics g): void <br>
+&nbsp; &nbsp; [x] param **Graphics** g <br>
+&nbsp; &nbsp; [x] return void <br>
 Logic for displaying the purse contents
 

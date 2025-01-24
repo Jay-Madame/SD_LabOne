@@ -10,15 +10,15 @@ public class Register {
 
         Purse purse = new Purse();
         Denomination[] denominations = {
-                new Denomination("Fifty Dollar Note", 50.0, "bill", "fifty.png"),
-                new Denomination("Twenty Dollar Note", 20.0, "bill", "twenty.png"),
-                new Denomination("Ten Dollar Note", 10.0, "bill", "ten.png"),
-                new Denomination("Five Dollar Note", 5.0, "bill", "five.png"),
-                new Denomination("One Dollar Note", 1.0, "bill", "one.png"),
-                new Denomination("Quarter", 0.25, "coin", "quarter.png"),
-                new Denomination("Dime", 0.10, "coin", "dime.png"),
-                new Denomination("Nickel", 0.05, "coin", "nickel.png"),
-                new Denomination("Penny", 0.01, "coin", "penny.png")
+                new Denomination("Fifty-Dollar Bill", 50.0, "bill", "fiftyDollarBill.png"),
+                new Denomination("Twenty-Dollar Bill", 20.0, "bill","twentyDollarBill.png"),
+                new Denomination("Ten-Dollar Bill", 10.0, "bill","tenDollarBill.png"),
+                new Denomination("Five-Dollar Bill", 5.0, "bill","fiveDollarBill.png"),
+                new Denomination("One-Dollar Bill", 1.0,"bill", "oneDollarBill.png"),
+                new Denomination("Quarter", 0.25,"cent","quarter.png"),
+                new Denomination("Dime", 0.10,"cent,","dime.png"),
+                new Denomination("Nickel", 0.05, "cent,","nickel.png"),
+                new Denomination("Penny", 0.01,"cent", "penny.png")
         };
 
 

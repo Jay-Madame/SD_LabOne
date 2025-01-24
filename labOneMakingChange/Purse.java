@@ -5,6 +5,10 @@ import java.util.Map;
 public class Purse {
     private final Map<Denomination, Integer> cash = new HashMap<>();
 
+    public Map<Denomination, Integer> getCash() {
+        return cash;
+    }
+
     // Take in an amount and add to current total in purse
     public void add(Denomination money, int num){
         cash.put(money, cash.getOrDefault(money, 0) + num);
