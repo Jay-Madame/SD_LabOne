@@ -10,7 +10,7 @@ public class RegisterPanel extends JPanel {
     private final Register register;
     private final JTextField inputField;
     private final JTextArea changeDisplay;
-    private final JPanel imagePanel; // Panel to display images
+    private final JPanel imagePanel;
 
     public RegisterPanel(Register register) {
         this.register = register;
@@ -27,9 +27,8 @@ public class RegisterPanel extends JPanel {
         changeDisplay = new JTextArea(10, 20);
         changeDisplay.setEditable(false);
 
-        // Image display panel
         imagePanel = new JPanel();
-        imagePanel.setLayout(new GridLayout(0, 5));
+        imagePanel.setLayout(new GridBagLayout());
 
         add(inputPanel, BorderLayout.NORTH);
         add(new JScrollPane(changeDisplay), BorderLayout.CENTER);
@@ -43,11 +42,8 @@ public class RegisterPanel extends JPanel {
         public void actionPerformed(ActionEvent e) {
             try {
                 double amount = Double.parseDouble(inputField.getText());
-
                 Purse purse = register.makeChange(amount);
-
                 changeDisplay.setText(purse.toString());
-
                 displayImages(purse);
 
             } catch (NumberFormatException ex) {
@@ -58,7 +54,6 @@ public class RegisterPanel extends JPanel {
         }
     }
 
-    // Method to display images of the denominations in the purse
     private void displayImages(Purse purse) {
         imagePanel.removeAll();
 
@@ -72,20 +67,17 @@ public class RegisterPanel extends JPanel {
             String imageFile = denom.img();
             ImageIcon icon = new ImageIcon(imageFile);
 
-            // resizing my fat cinabunny
             ImageIcon resizedImage = icon;
             if (denom.form().equals("bill")) {
+                gbc.gridwidth = 2;
                 Image image = icon.getImage();
                 Image scaledImage = image.getScaledInstance(300, 100, java.awt.Image.SCALE_SMOOTH);
                 resizedImage = new ImageIcon(scaledImage);
-                gbc.gridwidth = 2;
-            }
-
-            if (denom.form().equals("coin")) {
-                Image image = icon.getImage();
-                Image scaledImage = image.getScaledInstance(100, 100, java.awt.Image.SCALE_SMOOTH);
-                resizedImage = new ImageIcon(scaledImage);
+            } else if (denom.form().equals("coin")) {
                 gbc.gridwidth = 1;
+                Image image = icon.getImage();
+                Image scaledImage = image.getScaledInstance(200, 200, java.awt.Image.SCALE_SMOOTH);
+                resizedImage = new ImageIcon(scaledImage);
             }
 
             for (int i = 0; i < count; i++) {
