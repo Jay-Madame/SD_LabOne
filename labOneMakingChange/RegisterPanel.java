@@ -32,7 +32,7 @@ public class RegisterPanel extends JPanel {
 
         add(inputPanel, BorderLayout.NORTH);
         add(new JScrollPane(changeDisplay), BorderLayout.CENTER);
-        add(imagePanel, BorderLayout.SOUTH);
+        add(new JScrollPane(imagePanel), BorderLayout.SOUTH);
 
         inputField.addActionListener(new InputListener());
     }
