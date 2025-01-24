@@ -1,16 +1,16 @@
 package labOneMakingChange;
 
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.HashMap;
 import java.util.Map;
 
 public class RegisterPanel extends JPanel {
-    private Register register;
-    private JTextField inputField;
-    private JTextArea changeDisplay;
+    private final Register register;
+    private final JTextField inputField;
+    private final JTextArea changeDisplay;
 
     public RegisterPanel(Register register) {
         this.register = register;
@@ -48,10 +48,10 @@ public class RegisterPanel extends JPanel {
 
             String imageFile = money.img();
 
-
             for (int i = 0; i < count; i++) {
-                ImageIcon icon = new ImageIcon(getClass().getResource("/images/" + imageFile));
-                JLabel label = new JLabel(icon);
+                ImageIcon icon = new ImageIcon(imageFile);
+                JLabel label = new JLabel();
+                label.setIcon(icon);
                 imagePanel.add(label);
             }
         }
@@ -70,6 +70,7 @@ public class RegisterPanel extends JPanel {
                 double amount = Double.parseDouble(inputField.getText());
                 Purse purse = register.makeChange(amount);
                 changeDisplay.setText(purse.toString());
+                displayChange(purse);
             } catch (NumberFormatException ex) {
                 changeDisplay.setText("Please enter a valid amount!");
             }

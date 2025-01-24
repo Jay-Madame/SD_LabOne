@@ -9,6 +9,7 @@ public class MakingChange {
 
         Register register = new Register();
         RegisterPanel registerPanel = new RegisterPanel(register);
+        registerPanel.setVisible(true);
 
         frame.add(registerPanel);
         frame.pack();
