@@ -42,16 +42,12 @@ public class RegisterPanel extends JPanel {
         @Override
         public void actionPerformed(ActionEvent e) {
             try {
-                // Parse the input amount
                 double amount = Double.parseDouble(inputField.getText());
 
-                // Call register to get the purse with change
                 Purse purse = register.makeChange(amount);
 
-                // Update text area with the change description
                 changeDisplay.setText(purse.toString());
 
-                // Update image panel with images of the denominations
                 displayImages(purse);
 
             } catch (NumberFormatException ex) {
@@ -64,19 +60,31 @@ public class RegisterPanel extends JPanel {
 
     // Method to display images of the denominations in the purse
     private void displayImages(Purse purse) {
-        imagePanel.removeAll(); // Clear previous images
+        imagePanel.removeAll();
 
-        // Loop through the purse's denominations and their counts
+
         for (Map.Entry<Denomination, Integer> entry : purse.getCash().entrySet()) {
             Denomination denom = entry.getKey();
             int count = entry.getValue();
 
-            // Load and display the image for each denomination
-            String imageFile = denom.img(); // Path to the image file
+            String imageFile = denom.img();
             ImageIcon icon = new ImageIcon(imageFile);
 
+            ImageIcon resizedImage = icon;
+            if (denom.form().equals("bill")) {
+                Image image = icon.getImage();
+                Image scaledImage = image.getScaledInstance(300, 100, java.awt.Image.SCALE_SMOOTH);
+                resizedImage = new ImageIcon(scaledImage);
+            }
+
+            if (denom.form().equals("coin")) {
+                Image image = icon.getImage();
+                Image scaledImage = image.getScaledInstance(100, 100, java.awt.Image.SCALE_SMOOTH);
+                resizedImage = new ImageIcon(scaledImage);
+            }
+
             for (int i = 0; i < count; i++) {
-                JLabel label = new JLabel(icon);
+                JLabel label = new JLabel(resizedImage);
                 imagePanel.add(label);
             }
         }
