@@ -66,32 +66,32 @@
 &nbsp; &nbsp; [x] create a JFrame <br>
 &nbsp; &nbsp; [ ] add a RegisterPanel <br>
 
-[ ] register: Register <br>
+[x] register: Register <br>
 &nbsp; &nbsp; - handles application logic <br>
 
-[ ] inputPanel: JPanel <br>
+[x] inputPanel: JPanel <br>
 &nbsp; &nbsp; - panel containing the text field for user
     input <br>
 
-[ ] input: JTextField <br>
+[x] input: JTextField <br>
 &nbsp; &nbsp; - text field for entering the
     amount
 
-[ ] changePanel: PursePanel <br>
+[x] changePanel: PursePanel <br>
 &nbsp; &nbsp; - panel for displaying change <br>
 
 ### Inner Class
 
-[ ] InputListener <br>
-&nbsp; &nbsp; [ ] implements ActionListener <br>
+[x] InputListener <br>
+&nbsp; &nbsp; [x] implements ActionListener <br>
 
 **Function** <br>
 
-&nbsp; &nbsp; [ ] actionPerformed (ActionEvent): void<br>
+&nbsp; &nbsp; [x] actionPerformed (ActionEvent): void<br>
 &nbsp; &nbsp; &nbsp; &nbsp;
-            [ ] param: actionPerformed <br>
+            [x] param: actionPerformed <br>
 &nbsp; &nbsp; &nbsp; &nbsp;
-            [ ] return void <br>
+            [x] return void <br>
 
 This function will handle logic for processing
  input changes. <br>
