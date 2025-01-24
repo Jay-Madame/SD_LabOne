@@ -11,7 +11,7 @@ public class Register {
         Purse purse = new Purse();
         Denomination[] denominations = {
                 new Denomination("Fifty-Dollar Bill", 50.0, "bill", "fiftyDollarBill.png"),
-                new Denomination("Twenty-Dollar Bill", 20.0, "bill","twentyDollarBill.png"),
+                new Denomination("Twenty-Dollar Bill", 20.0, "bill","/Users/jay/Projects/SD_Spring2025/Module1/LabOne/labOneMakingChange/twentyDollarBill.png"),
                 new Denomination("Ten-Dollar Bill", 10.0, "bill","tenDollarBill.png"),
                 new Denomination("Five-Dollar Bill", 5.0, "bill","fiveDollarBill.png"),
                 new Denomination("One-Dollar Bill", 1.0,"bill", "oneDollarBill.png"),
